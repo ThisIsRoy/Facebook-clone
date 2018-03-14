@@ -1,6 +1,6 @@
-# Facebook CLone
+# Facebook Clone
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3. WIP project for learning Angular 4. 
+WIP project for learning Angular. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3. 4.  
 
 ## Development server
 
