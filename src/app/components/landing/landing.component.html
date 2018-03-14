@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div class="container">
+     <div class="title">
+      <h1>Welcome to RiceBook!</h1>
+      <hr>
+     </div>
+     <div class="row">
+      <div class="col-md-5 col-md-offset-1 sign-up">
+        <h2>Sign Up</h2><br>
+        <h5>{{ registerForm }}</h5>
+        <div class="alert alert-danger"></div>
+        <form ngNativeValidate (ngSubmit)="redirect()" >
+          <div class="form-group">
+             <label for="name">Registration Name</label>
+             <input type="text" name="name" id="name" placeholder="registration name" class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9]+" oninvalid="this.setCustomValidity('Name can only be numbers or letters and first character cannot be a number')" oninput="setCustomValidity('')" [(ngModel)]="register.name" required>
+          </div>
+          <div class="form-group">
+             <label for="display">Display Name (optional)</label>
+             <input type="text" placeholder="display name" class="form-control">
+          </div>
+          <div class="form-group">
+             <label for="email">Email</label>
+             <input type="email" name="email" placeholder="email" class="form-control" [(ngModel)]="register.email" required>
+          </div>
+          <div class="form-group">
+             <label for="phone">Phone Number (###-###-####)</label>
+             <input type="tel" placeholder="123-456-7890" name="phone" id="phone" class="form-control" pattern="(\d){3}-(\d){3}-(\d){4}" oninvalid="this.setCustomValidity('Phone number should follow ###-###-####')" oninput="setCustomValidity('')" [(ngModel)]="register.phone" required>
+          </div>
+          <div class="form-group">
+             <label for="birthdate">Date of Birth</label>
+             <input type="date" name="birth" placeholder="MM/DD/YYYY" class="form-control" [(ngModel)]="register.birth" required>
+          </div>
+          <div class="form-group">
+             <label for="zipcode">ZIP Code</label>
+             <input type="text" name="zip" placeholder="zip code" class="form-control" pattern="\d{5}" oninvalid="this.setCustomValidity('Your zip code should be 5 numbers')" oninput="setCustomValidity('')" [(ngModel)]="register.zip" required>
+          </div>
+          <div class="form-group">
+             <label for="password">Password</label>
+             <input type="password" name="password" class="form-control" [(ngModel)]="register.password" required>
+          </div>
+          <div class="form-group">
+             <label for="password2">Password Confirmation</label>
+             <input type="password" name="password2" class="form-control" [(ngModel)]="register.password2" required>
+          </div><br>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <button type="button" class="btn btn-danger">Clear</button>
+        </form>
+      </div>
+      <div class="col-md-4 col-md-offset-1 log-in">
+        <form>
+          <h2>Log In</h2><br>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" required>
+          </div>
+          <a href="/main"><button type="button" class="btn btn-success">Log In</button></a>
+        </form>
+      </div>
+     </div>
+  </div>

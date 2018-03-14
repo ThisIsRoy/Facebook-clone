@@ -1,0 +1,9 @@
+{
+	"followers": [
+		{"name": "James Miller", "status": "Feeling down :(", "link": "https://images.pexels.com/photos/542282/pexels-photo-542282.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"},
+		{"name": "Charlie Yellow", "status": "Everyday is a new adventure!", "link": "https://images.pexels.com/photos/211050/pexels-photo-211050.jpeg?h=350&auto=compress&cs=tinysrgb"},
+		{"name": "Kelly Stevenson", "status": "almost my birthday!", "link": "https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?h=350&auto=compress&cs=tinysrgb"},
+		{"name": "Sharon Tolern", "status": "GREAT", "link": "https://images.pexels.com/photos/206445/pexels-photo-206445.jpeg?h=350&auto=compress&cs=tinysrgb"},
+		{"name": "Anna Johnson", "status": "booo", "link": "https://images.pexels.com/photos/325531/pexels-photo-325531.jpeg?h=350&auto=compress&cs=tinysrgb"}
+	]
+}

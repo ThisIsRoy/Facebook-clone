@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div class="container profile-container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" class="img-thumbnail" id="profie-pic" alt="profile-pic">
+			<button class="btn btn-success" id="pic-button">Upload New Picture</button>
+		</div>
+		<div class="col-md-5 col-md-offset-1 profile-header">
+			<h2>RiceBook</h2>
+			<hr>
+			<p>A place to hang out with your favorite people and check out the latest happenings. Have a suggestion or just wanted to leave a comment? Leave a tweet @RiceBook!</p>
+			<a routerLink="/main"><button class="btn btn-primary">Return</button></a>	
+		</div>
+	</div>
+	<div class="row profile-info">
+		<div class="col-md-5 col-md-offset-1 current-info">
+			<h3>Current Info</h3>
+			<p><span class="bolded">Name: </span><span id="name-span">{{ name }}</span></p>
+			<p><span class="bolded">Email: </span><span id="email-span">{{ email }}</span></p>
+			<p><span class="bolded">Phone: </span><span id="phone-span">{{ phone }}</span></p>
+			<p><span class="bolded">Zip: </span><span id="zip-span">{{ zip }}</span></p>
+			<p><span class="bolded">Birth Date: </span><span id="birthdate-span">{{ birth }}</span></p>
+		</div>
+		<div class="col-md-4">
+			<form>
+				<h3>Update Info</h3>
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" name="name" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" name="email" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone</label>
+					<input type="tel" name="phone" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="zipcode">Zip Code</label>
+					<input type="text" name="zipcode" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" name="password" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="password2">Confirm Password</label>
+					<input type="password" name="password2" class="form-control">
+				</div>
+				<button class="btn btn-success" (onclick)="updateInfo">Submit</button>
+			</form>
+			
+			
+		</div>
+	</div>
+</div>

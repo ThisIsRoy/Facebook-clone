@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div class="container">
+	<div class="main-head">
+		<h1>RiceBook</h1>
+		<hr>
+		<a routerLink="/profile"><button class="btn btn-primary">Profile</button></a>
+		<a routerLink="/"><button class="btn btn-danger">Log Out</button></a>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+			<div class="add-post">
+				<div>
+					<!-- <input type="text" name="post" [(ngModel="postText")]> -->
+					<textarea ></textarea>
+					<div id="add-image">
+						<label for="postImage" class="btn">Upload Image</label>
+						<input type="file" name="postImage" id="postImage" accept="image/*">
+					</div>
+					
+					<button class="btn btn-success">Post</button>
+					<button class="btn btn-warning" id="clearBtn" (click)="clearPost()" #clearBtn>Clear</button>
+				</div>
+			</div>
+			<div id="search-bar">
+				<input type="text" name="search" placeholder=" search posts"	>		
+			</div>
+			<div class="main-posts">
+				<div class="col-md-4 post">
+					<img class="img-responsive" src="https://images.pexels.com/photos/40815/youth-active-jump-happy-40815.jpeg?h=350&auto=compress&cs=tinysrgb" alt="post image">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+					<button class="btn btn-xs btn-success">Comment</button>
+					<button class="btn btn-xs btn-warning">Edit</button>	
+				</div>
+				<div class="col-md-4 post">
+				 	<img class="img-responsive" src="https://images.pexels.com/photos/386024/pexels-photo-386024.jpeg?h=350&auto=compress&cs=tinysrgb" alt="post image">
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<button class="btn btn-xs btn-success">Comment</button>
+					<button class="btn btn-xs btn-warning">Edit</button>	
+				</div>
+				<div class="col-md-4 post">
+					<p>Bacon ipsum dolor amet andouille pancetta alcatra shank. Pork belly rump sausage jowl burgdoggen ground round. Ball tip chicken burgdoggen, shank andouille meatball landjaeger drumstick pork belly. Turducken jowl tri-tip andouille shank. Jowl beef leberkas, shank frankfurter fatback pork loin pork. Ground round alcatra ham frankfurter filet mignon. Sausage turducken bacon, ground round shank cupim spare ribs chicken shoulder pork loin jowl doner tri-tip.</p>
+					<button class="btn btn-xs btn-success">Comment</button>
+					<button class="btn btn-xs btn-warning">Edit</button>	
+				</div>
+				<div class="col-md-4 post">
+					<p>Alcatra quis strip steak sunt est leberkas tail short ribs ground round occaecat cillum in. Reprehenderit mollit laborum commodo picanha culpa, sirloin deserunt adipisicing porchetta. Venison strip steak kevin landjaeger, pork loin et brisket ea shank esse filet mignon flank eiusmod.</p>
+					<button class="btn btn-xs btn-success">Comment</button>
+					<button class="btn btn-xs btn-warning">Edit</button>	
+				</div>
+				<div class="col-md-4 post">
+					<p>Meatloaf hamburger sirloin reprehenderit beef ribs, tri-tip dolor ad. Ham hock duis fugiat, filet mignon porchetta short ribs nulla aute. Ribeye qui sirloin pork belly salami.</p>
+					<button class="btn btn-xs btn-success">Comment</button>
+					<button class="btn btn-xs btn-warning">Edit</button>	
+				</div>
+				<div class="col-md-4 post">
+					<p>Spicy jalapeno eu pork belly drumstick doner kevin quis jowl ea boudin voluptate bacon. Meatloaf nulla hamburger beef jerky alcatra. Fugiat chicken incididunt, shank pancetta tenderloin beef ribs swine cow short loin.</p>
+					<button class="btn btn-xs btn-success">Comment</button>
+					<button class="btn btn-xs btn-warning">Edit</button>	
+				</div>
+				<div class="col-md-4 post">
+					<img class="img-responsive" src="https://images.pexels.com/photos/211047/pexels-photo-211047.jpeg?h=350&auto=compress&cs=tinysrgb" alt="post image">
+					<p>T-bone prosciutto shank, rump ribeye burgdoggen leberkas tri-tip picanha drumstick tail pig. Tri-tip swine turducken capicola filet mignon.</p>
+					<button class="btn btn-xs btn-success">Comment</button>
+					<button class="btn btn-xs btn-warning">Edit</button>	
+				</div>
+				<div class="col-md-4 post">
+					<img class="img-responsive" src="https://images.pexels.com/photos/378152/pexels-photo-378152.jpeg?h=350&auto=compress&cs=tinysrgb" alt="post image">
+					<p>Drumstick pork chop kevin, turkey beef ribs pork loin pastrami boudin. Ground round beef ribs pork chop, strip steak meatball salami pork belly capicola frankfurter chuck kielbasa pastrami leberkas.</p>
+					<button class="btn btn-xs btn-success">Comment</button>
+					<button class="btn btn-xs btn-warning">Edit</button>	
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-md-4">
+			<div class="main-profile">
+				<img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" class="img-thumbnail" alt="profile-pic">
+				<p class="bolded main-name">Bob Smith</p>
+				<p>{{ status }}</p>
+				<input type="text" name="status" placeholder=" new status" [(ngModel)]="inputStatus">
+				<button class="btn btn-success" (click)="updateStatus()" id="clickButton">Update</button>
+			</div>
+			<div class="main-friends">
+				<h3>Friends</h3>
+				<div class="friend" #friend1>
+					<img src="https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" class="img-responsive" alt="friend pic">
+					<p class="bolded main-name">Stan Poki</p>
+					<p>TGIF</p>
+					<button class="btn btn-xs btn-danger" (click)="friend1.remove()">Unfollow</button>
+				</div>
+				<div class="friend" #friend2>
+					<img src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" class="img-responsive" alt="friend pic">
+					<p class="bolded main-name">Josh Blank</p>
+					<p>Heading out to NOLA for the weekend!!!!!</p>
+					<button class="btn btn-xs btn-danger" (click)="friend2.remove()">Unfollow</button>
+				</div>
+				<div class="friend" #friend3>
+					<img src="https://images.pexels.com/photos/277194/pexels-photo-277194.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" class="img-responsive" alt="friend pic">
+					<p class="bolded main-name">Peter Tyrell</p>
+					<p>Does anyone have some tape I can borrow</p>
+					<button class="btn btn-xs btn-danger" (click)="friend3.remove()">Unfollow</button>
+				</div>
+				<div [innerHTML]="friendHTML | sanitizeHtml"></div>
+				<div class="add-friend">
+					<input type="text" name="add-friend" placeholder=" user" [(ngModel)]="inputFriend">
+					<button class="btn btn-success" (click)="addFriend()">Follow</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
